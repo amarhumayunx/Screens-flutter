@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:screen/screens/booking_screen.dart';
-import 'package:screen/screens/hotel_detail_screen.dart';
-import 'package:screen/screens/login_screen.dart';
-import 'package:screen/video_app_screens/music_home_screen.dart';
+import 'package:screen/glass_music_player/music_player.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MusicHomeScreen(),
+      home: MusicPlayerScreen(),
     );
   }
 }

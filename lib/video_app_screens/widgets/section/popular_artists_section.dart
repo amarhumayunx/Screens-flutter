@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../data/popular_artists.dart';
-import '../models/artists.dart';
-import 'artist_item.dart';
+import '../../data/popular_artists.dart';
+import '../../components/artist_item.dart';
 
 class PopularArtistsSection extends StatelessWidget {
   PopularArtistsSection({super.key});
@@ -14,7 +13,7 @@ class PopularArtistsSection extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 30, 20, 16),
+          padding: const EdgeInsets.fromLTRB(20, 30, 20, 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -39,13 +38,13 @@ class PopularArtistsSection extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 120,
+          height: 150,
           child: ListView.builder(
-            padding: const EdgeInsets.symmetric(horizontal: 18),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             scrollDirection: Axis.horizontal,
             itemCount: popularArtists.length,
             itemBuilder: (context, index) {
-              return ArtistItem(artist: popularArtists[index]); // ✅ use the widget
+              return ArtistItem(artist: popularArtists[index]);
             },
           ),
         )

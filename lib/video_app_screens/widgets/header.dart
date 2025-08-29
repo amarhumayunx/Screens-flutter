@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -29,7 +30,7 @@ class Header extends StatelessWidget {
                 ),
               ),
               Text(
-                "Hi, Linh Nguyen",
+                "Hi, User",
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 18,
@@ -40,11 +41,15 @@ class Header extends StatelessWidget {
             ],
           ),
           const Spacer(),
-          const Icon(
-            Icons.more_horiz,
-            color: Colors.grey,
-            size: 26,
-          ),
+          SvgPicture.asset(
+            'assets/icons/menu_icon.svg',
+            width: 26,
+            height: 26,
+            colorFilter: const ColorFilter.mode(
+              Colors.black,
+              BlendMode.srcIn,
+            ),
+          )
         ],
       ),
     );

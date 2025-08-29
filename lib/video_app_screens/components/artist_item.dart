@@ -10,22 +10,24 @@ class ArtistItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 80,
-      margin: const EdgeInsets.symmetric(horizontal: 8),
+      width: 85,
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         children: [
-          CircleAvatar(
-            radius: 38,
-            backgroundImage: NetworkImage(artist.imageUrl),
-            onBackgroundImageError: (exception, stackTrace) {
-              // Handle error (optional logging, fallback image, etc.)
-            },
+          Expanded(
+            child: CircleAvatar(
+              radius: 45,
+              backgroundImage: NetworkImage(artist.imageUrl),
+              onBackgroundImageError: (exception, stackTrace) {
+                // Handle error (optional logging, fallback image, etc.)
+              },
+            ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           Text(
             artist.name,
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 14,
               color: Colors.black87,
               fontFamily: GoogleFonts.poppins().fontFamily,
               fontWeight: FontWeight.w500,
