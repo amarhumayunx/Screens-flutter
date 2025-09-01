@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:screen/chatbot/screens/chatbot_screen.dart';
 import 'package:screen/glass_music_player/music_player.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: MusicPlayerScreen(),
+      home: ChatbotScreen(),
     );
   }
 }
